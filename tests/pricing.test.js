@@ -4,8 +4,9 @@ test('two tickets cost 724', function () { assertEq(calcTotal(2), 724); });
 test('one ticket costs 362', function () { assertEq(calcTotal(1), 362); });
 test('regular customers may buy up to 8', function () { assertEq(maxTickets(), 8); });
 test('members receive 20% off the ticket price', function () { assertEq(calcTotal(2, true), 584); });
-test('members may buy up to 4 tickets', function () { assertEq(maxTickets(true), 4); });
-test('member orders above the limit are rejected', function () { assertEq(calcTotal(5, true), null); });
+test('members may buy up to 6 tickets', function () { assertEq(maxTickets(true), 6); });
+test('member orders at the limit are accepted', function () { assertEq(calcTotal(6, true), 1752); });
+test('member orders above the limit are rejected', function () { assertEq(calcTotal(7, true), null); });
 test('students receive 15% off the ticket price', function () { assertEq(calcTotal(2, false, true), 619); });
 test('members receive the larger discount when they are also students', function () {
   assertEq(calcTotal(2, true, true), 584);
