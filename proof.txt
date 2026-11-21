@@ -1,0 +1,91 @@
+### git worktree list
+C:/Users/user1/.copilot/repos/ticketrush-final-exercise 15f062e [main]
+C:/Users/user1/.copilot/repos/ticketrush-early-access   2d7ae9d [feature/early-access]
+C:/Users/user1/.copilot/repos/ticketrush-hotfix-price   4b8aeaa [ruth/date-cherry-pick]
+C:/Users/user1/.copilot/repos/ticketrush-noa-refund     b1e4650 [noa/refund]
+C:/Users/user1/.copilot/repos/ticketrush-price-revert   27ac147 [hotfix/price-revert]
+C:/Users/user1/.copilot/repos/ticketrush-review-noa     902097f [review/noa-refund]
+C:/Users/user1/.copilot/repos/ticketrush-ruth-exact     f696778 [ruth/date-exact]
+C:/Users/user1/.copilot/repos/ticketrush-waitlist       55d284f [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access                                   2d7ae9d (C:/Users/user1/.copilot/repos/ticketrush-early-access) feat: raise member ticket limit to six
++ feature/waitlist                                       55d284f (C:/Users/user1/.copilot/repos/ticketrush-waitlist) feat: deduplicate waitlist emails case-insensitively
+  hotfix/price                                           faa2241 docs: finalize launch checklist and verification
++ hotfix/price-revert                                    27ac147 (C:/Users/user1/.copilot/repos/ticketrush-price-revert) Revert faster price formatting
+* main                                                   15f062e [origin/main: ahead 15] merge: integrate Ruth date fix with source attribution
++ noa/refund                                             b1e4650 (C:/Users/user1/.copilot/repos/ticketrush-noa-refund) [origin/noa/refund] test: refund tests
++ review/noa-refund                                      902097f (C:/Users/user1/.copilot/repos/ticketrush-review-noa) docs: review Noa refund calculation
++ ruth/date-cherry-pick                                  4b8aeaa (C:/Users/user1/.copilot/repos/ticketrush-hotfix-price) fix: correct concert date in events.js
++ ruth/date-exact                                        f696778 (C:/Users/user1/.copilot/repos/ticketrush-ruth-exact) fix: correct concert date in events.js
+  remotes/origin/HEAD                                    -> origin/main
+  remotes/origin/dana/promo                              e1214be test: add student discount tests
+  remotes/origin/main                                    faa2241 docs: finalize launch checklist and verification
+  remotes/origin/noa/refund                              b1e4650 test: refund tests
+  remotes/origin/ruth/fixes                              af45142 wip: try new fonts
+  remotes/origin/yochehved-fruchter/feature/early-access 2d7ae9d feat: raise member ticket limit to six
+  remotes/origin/yochehved-fruchter/feature/waitlist     55d284f feat: deduplicate waitlist emails case-insensitively
+  remotes/origin/yochehved-fruchter/hotfix/price         faa2241 docs: finalize launch checklist and verification
+  remotes/origin/yochehved-fruchter/main                 cb3798a merge: waitlist feature
+  remotes/origin/yochehved-fruchter/result               c048d39 result yochehved-fruchter 94/100
+  remotes/origin/yochehved-fruchter/review/noa-refund    902097f docs: review Noa refund calculation
+
+### git log --graph --oneline --all -n 80
+*   15f062e (HEAD -> main, tag: v1.1) merge: integrate Ruth date fix with source attribution
+|\  
+| * f696778 (ruth/date-exact) fix: correct concert date in events.js
+* |   8fbf1bb merge: integrate the single Ruth date fix
+|\ \  
+| * | 4b8aeaa (ruth/date-cherry-pick) fix: correct concert date in events.js
+| |/  
+* |   4b74bc7 merge: integrate explicit price formatter revert
+|\ \  
+| * | 27ac147 (hotfix/price-revert) Revert faster price formatting
+* | |   cb3798a (origin/yochehved-fruchter/main) merge: waitlist feature
+|\ \ \  
+| * | | 55d284f (origin/yochehved-fruchter/feature/waitlist, feature/waitlist) feat: deduplicate waitlist emails case-insensitively
+| | |/  
+| |/|   
+* | |   d0fb59c merge: early-access and student promotions
+|\ \ \  
+| * | | 2d7ae9d (origin/yochehved-fruchter/feature/early-access, feature/early-access) feat: raise member ticket limit to six
+| * | |   f16ed1d Merge origin/dana/promo into feature/early-access
+| |\ \ \  
+| | * | | e1214be (origin/dana/promo) test: add student discount tests
+| | * | | 56ff677 feat: student discount (15%)
+| | |/ /  
+| * / / 47144fd feat: add early access member pricing
+| |/ /  
+* / / fc85f61 fix: correct concert date in events.js
+|/ /  
+| |   * c048d39 (origin/yochehved-fruchter/result) result yochehved-fruchter 94/100
+| | * 902097f (origin/yochehved-fruchter/review/noa-refund, review/noa-refund) docs: review Noa refund calculation
+| | * b1e4650 (origin/noa/refund, noa/refund) test: refund tests
+| | * e510c92 feat: refund calculation for cancelled orders
+| |/  
+|/|   
+| | * af45142 (origin/ruth/fixes) wip: try new fonts
+| | * a1ed206 debug: dump state to console
+| | * 659db9e WIP: try removing ticket limits
+| | * 6b8206a fix: correct concert date in events.js
+| | * d49be77 WIP: new checkout flow (do not merge)
+| |/  
+|/|   
+* | faa2241 (origin/yochehved-fruchter/hotfix/price, origin/main, origin/HEAD, hotfix/price) docs: finalize launch checklist and verification
+* | ff4ee6d feat: polish launch messaging for release
+* | 874e53a fix: finalize the concert date for ticket sales
+* | 13da5a0 feat: keep the event info ready for launch
+* | b2dabcc feat: add early-access pricing and waitlist
+* | f513363 Revert "perf: faster price formatting"
+* | 6e5b25d feat: friendlier message for empty quantity
+* | 9119fe2 fix: typo in hero heading
+* | a61f4ad feat: add footer with links
+|/  
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
